@@ -7,6 +7,9 @@ var botonCuatro = document.getElementById('botonCuatro')
 var botonCinco = document.getElementById('botonCinco')
 var botonSeis = document.getElementById('botonSeis')
 var botonSiete = document.getElementById('botonSiete')
+var botonOcho = document.getElementById('botonOcho')
+var botonNueve = document.getElementById('botonNueve')
+var botonCero = document.getElementById('botonCero')
 
 var botonSuma = document.getElementById('botonSuma')
 var actual = document.getElementById('actual')
@@ -19,6 +22,9 @@ botonCuatro.addEventListener('click', clickCuatro)
 botonCinco.addEventListener('click', clickCinco)
 botonSeis.addEventListener('click', clickSeis)
 botonSiete.addEventListener('click',clickSiete)
+botonOcho.addEventListener('click',clickOcho)
+botonNueve.addEventListener('click',clickNueve)
+botonCero.addEventListener('click',clickCero)
 
 botonSuma.addEventListener('click', clickSuma)
 
@@ -29,6 +35,9 @@ Mousetrap.bind('4',clickCuatro)
 Mousetrap.bind('5',clickCinco)
 Mousetrap.bind('6',clickSeis)
 Mousetrap.bind('7',clickSiete)
+Mousetrap.bind('8',clickOcho)
+Mousetrap.bind('9',clickNueve)
+Mousetrap.bind('0',clickCero)
 
 Mousetrap.bind('+',clickSuma)
 
@@ -60,6 +69,18 @@ function clickSeis(){
 
 function clickSiete(){
     actual.innerHTML+='7'
+}
+
+function clickOcho(){
+    actual.innerHTML+='8'
+}
+
+function clickNueve(){
+    actual.innerHTML+='9'
+}
+
+function clickCero(){
+    actual.innerHTML+='0'
 }
 
 
