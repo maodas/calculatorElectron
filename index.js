@@ -91,3 +91,5 @@ function clickSuma(){
     actual.innerHTML = '0'
 }
 
+
+/prueba/
