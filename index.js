@@ -12,6 +12,12 @@ var botonNueve = document.getElementById('botonNueve')
 var botonCero = document.getElementById('botonCero')
 
 var botonSuma = document.getElementById('botonSuma')
+var botonResta = document.getElementById('botonResta')
+var botonMult = document.getElementById('botonMult')
+var botonDiv = document.getElementById('botonDiv')
+
+var botonCL = document.getElementById('botonClear')
+
 var actual = document.getElementById('actual')
 var resultado = document.getElementById('resultado')
 
@@ -27,6 +33,11 @@ botonNueve.addEventListener('click',clickNueve)
 botonCero.addEventListener('click',clickCero)
 
 botonSuma.addEventListener('click', clickSuma)
+botonResta.addEventListener('click',clickResta)
+botonMult.addEventListener('click', clickMult)
+botonDiv.addEventListener('click',clickDiv)
+
+botonCL.addEventListener('click', clickCL )
 
 Mousetrap.bind('1',clickUno)
 Mousetrap.bind('2',clickDos)
@@ -40,7 +51,11 @@ Mousetrap.bind('9',clickNueve)
 Mousetrap.bind('0',clickCero)
 
 Mousetrap.bind('+',clickSuma)
+Mousetrap.bind('-',clickResta)
+Mousetrap.bind('*',clickMult)
+Mousetrap.bind('/',clickDiv)
 
+Mousetrap.bind('backspace',clickCL)
 
 
 function clickUno (){
@@ -89,7 +104,36 @@ function clickSuma(){
     let valorResultado = parseInt(resultado.innerHTML)
     resultado.innerHTML = valorActual + valorResultado
     actual.innerHTML = '0'
+    
 }
 
 
-/prueba/
+function clickResta(){
+    let valorActual = parseInt(actual.innerHTML)
+    let valorResultado = parseInt(resultado.innerHTML)
+    resultado.innerHTML = valorActual - valorResultado
+    actual.innerHTML = '0'
+}
+
+
+function clickMult(){
+    let valorActual = parseInt(actual.innerHTML)
+    let valorResultado = parseInt(resultado.innerHTML)
+    resultado.innerHTML = valorActual * valorResultado
+    actual.innerHTML = '0'
+  
+}
+
+
+function clickDiv(){
+    let valorActual = parseInt(actual.innerHTML)
+    let valorResultado = parseInt(resultado.innerHTML)
+    resultado.innerHTML = valorActual / valorResultado
+    actual.innerHTML = '0'
+}
+
+function clickCL(){
+    resultado.innerHTML = ''
+    actual.innerHTML = ''
+    
+}
